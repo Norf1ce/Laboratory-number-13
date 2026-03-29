@@ -1,0 +1,26 @@
+// Любевич Нікіта 101 група (4 варіант) 
+
+#include <stdio.h>   
+int S(int n, int m)
+{
+    if(n == 1 && m == 1) return 1;   
+
+    if(n > 1) 
+        return S(n - 1, m) + m;      
+
+    else 
+        return S(n, m - 1) + n;      
+}
+
+int main()
+{
+    int n, m;   
+
+    printf("n = ");      
+    scanf("%d", &n);     
+    printf("m = ");      
+    scanf("%d", &m);     
+    printf("S = %d\n", S(n, m));   
+
+    return 0;   
+}
